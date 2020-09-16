@@ -1,10 +1,12 @@
 #include<stdio.h>
+
 main(){
+
 //variables required
 int i,j,rows,columns,rows2,columns2,a[100][100],b[100][100], num = 1, num2 = 1, k= 1, x= 1, y = 1,
-great,sum[3][100],sparse[3][100] ,sparse2[3][100] , temp,sorted[3][100];
+sum[3][100],sparse[3][100] ,sparse2[3][100] , temp;
 
-//==========Input Matrix 1==========
+//=========================================Input Matrix 1 =========================================================
 
 //getting the no of rows of first matrix
 printf("Enter the number of rows in the matrix 1 \n");
@@ -30,7 +32,7 @@ for (i = 1;i <=rows;++i){
     }
 }
 
-//==========Input Matrix 2 ==========
+//=============================================Input Matrix 2 =========================================================
 
 //getting the no of rows of second matrix
 printf("Enter the number of rows in the matrix 2 \n");
@@ -56,7 +58,7 @@ for (i = 1;i <=rows2;++i){
     }
 }
 
-//==========Printing sparse matrices==========
+//==============================================Printing sparse matrices===================================
 
 //printing the sparse of the first matrix
 printf("The Sparse of the first matrix is: \n");
@@ -76,7 +78,7 @@ for (i = 1;i <=3;++i){
     printf("\n");
 }
 
-//==========adding 2 sparse matrices ==========
+//============================================adding 2 sparse matrices =============================
 
 //checking if we can add
 if(rows == rows2 && columns == columns2) {
@@ -139,14 +141,7 @@ while(k <= (num - 1) && x <= (num2-1)){
         }
     }
 
-    //finding the greater dimension among the sparse matrices
-    if ((num2-1) > (num-1)){
-        great = num2-1;
-    }
 
-    else{
-        great = num-1;
-    }
 
   //printing the remaining elements
 if (x>num2-1){
@@ -184,7 +179,7 @@ for(i=1;i<=3;++i){
     printf("\n");
 }
 
-//==========transpose of the sparse matrix==========
+//==============================================transpose of the sparse matrix==============================
 
 //transpose of the resultant matrix
 for(j=1;j<= y-1;++j){
@@ -203,7 +198,7 @@ for(i=1;i<= 3;++i){
     printf("\n");
 }
 
-//==========sorting the sparse matrix==========
+//============================================sorting the sparse matrix=======================================
 
     for(i=1;i<= y-2;++i){
 
